@@ -63,17 +63,17 @@ function Main() {
             <div id='container03'>
                 <h1>PRODUCTS</h1>
                 <div className='container3'>
-                    <div className='con3_child'>
+                    <div id='con3_1' className='con3_child'>
                         <h3>TOPPER</h3>
                         <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
                     </div>
-                    <div className='con3_child'>
-                        <h3>TOPPER</h3><br/><h3>MATTRESS</h3>
-                        <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
+                    <div id='con3_2' className='con3_child'>
+                        <h3>TOPPER<br/>MATTRESS</h3>
+                        <img src='signature-bed-image/container3-2.jpg' alt='con3-2'/>
                     </div>
-                    <div className='con3_child'>
-                        <h3>MOTION</h3><br/><h3>BED</h3>
-                        <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
+                    <div id='con3_3' className='con3_child'>
+                        <h3>MOTION<br/>BED</h3>
+                        <img src='signature-bed-image/container3-3.jpg' alt='con3-3'/>
                     </div>
                 </div>
             </div>
