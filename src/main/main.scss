@@ -6,6 +6,7 @@
             width: 100%;
         }
     }
+    // container01
     #container01 {
         background-image: linear-gradient(105deg, #bfa387 58.45%, #9d846a 58.5%);
         position: relative;
@@ -14,7 +15,7 @@
             position: relative;
             width: 1170px;
         }
-        #con_text {
+        #con_text01 {
             padding: 100px;
             margin: 15px 0 15px 100px;
             h2 {
@@ -30,7 +31,7 @@
                 margin-bottom: 10px;
             }
         }
-        #con_img {
+        #con_img01 {
             position: relative;
             padding: 100px 50px 100px 0;
             // margin: 15px 100px 15px 0;
@@ -50,5 +51,92 @@
                 }
             }
         }
+    }
+    // container02
+    #container02 {
+        position: relative;
+        display: flex;
+        h1 {
+            width: 100%;
+            height: 100px;
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container2 {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .con2_child {
+                margin: 10px;
+                position: relative;
+            } 
+            #con2_left {
+                width: 50%;
+                display: flex;
+                justify-content: right;
+                #con2_text1 {
+                    position: absolute;
+                    top: 80px;
+                    right: 30px;
+                    h3 {
+                        color: #fff;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                    span {
+                        color: #fff;
+                        font-size: 20px;
+                    }
+                }
+            }
+            #con2_right {
+                width: 50%;
+                display: flex;
+                justify-content: left;
+                flex-wrap: wrap;
+                &>div:nth-child(2) {
+                    padding-top: 10px;
+                }
+                #con2_text2 {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    h3 {
+                        color: #fff;
+                        font-size: 26px;
+                        font-weight: bold;
+                    }
+                    span {
+                        color: #fff;
+                        font-size: 20px;
+                    }
+                }
+                #con2_text3 {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    h3 {
+                        color: #fff;
+                        font-size: 26px;
+                        font-weight: bold;
+                    }
+                    span {
+                        color: #fff;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    // container03
+    #container03 {
+        
     }
 }

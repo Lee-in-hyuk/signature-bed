@@ -3,6 +3,7 @@ import { Carousel } from "antd";
 import 'antd/dist/antd.min.css';
 import { ImYoutube } from 'react-icons/im';
 import './main.scss';
+import { Link } from 'react-router-dom';
 
 function Main() {
     return (
@@ -15,7 +16,7 @@ function Main() {
                 </Carousel>
             </div>
             <div id='container01'>
-                <div id='con_text' className='container1'>
+                <div id='con_text01' className='container1'>
                     <h2>The best foam</h2>
                     <h3>최상의 폼</h3>
                     <h2>Optimal layer</h2>
@@ -23,10 +24,57 @@ function Main() {
                     <h2>Perfect sleep</h2>
                     <h3>완벽한 숙면</h3>
                 </div>
-                <div id='con_img' className='container1'>
+                <div id='con_img01' className='container1'>
                     <img src='signature-bed-image/container1.jpg' alt='video'/>
-                    <a href='https://youtu.be/3xfTtMlKcWs'><span><ImYoutube/></span></a>
-                    {/* <video src='https://youtu.be/3xfTtMlKcWs' width="600px" height="400px" controls><span><ImYoutube/></span></video> */}
+                    {/* <a href='https://youtu.be/3xfTtMlKcWs'><span><ImYoutube/></span></a> */}
+                    <Link to="/Video"><span><ImYoutube/></span></Link>
+                </div>
+            </div>
+            <div id='container02'>
+                <h1>COLLECTION</h1>
+                <div className='container2'>
+                    <div id='con2_left'>
+                        <div className='con2_child'>
+                            <div id='con2_text1'>
+                                <h3>SIGNATURE BASIC</h3>
+                                <span>똑똑한 사람들의 합리적인 선택</span>
+                            </div>
+                            <img src='signature-bed-image/container2-1.jpg' alt='con2-1'/>
+                        </div>
+                    </div>
+                    <div id='con2_right'>
+                        <div className='con2_child'>
+                            <div id='con2_text2'>
+                                <h3>SIGNATURE ACTIVE</h3>
+                                <span>유능한 사람들의 고급스러운 선택</span>
+                            </div>
+                            <img src='signature-bed-image/container2-2.jpg' alt='con2-2'/>
+                        </div>
+                        <div className='con2_child'>
+                            <div id='con2_text3'>
+                                <h3>SIGNATURE G2</h3>
+                                <span>열정적인 사람들의 탁월한 선택</span>
+                            </div>
+                            <img src='signature-bed-image/container2-3.jpg' alt='con2-3'/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='container03'>
+                <h1>PRODUCTS</h1>
+                <div className='container3'>
+                    <div className='con3_child'>
+                        <h3>TOPPER</h3>
+                        <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
+                    </div>
+                    <div className='con3_child'>
+                        <h3>TOPPER</h3><br/><h3>MATTRESS</h3>
+                        <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
+                    </div>
+                    <div className='con3_child'>
+                        <h3>MOTION</h3><br/><h3>BED</h3>
+                        <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
+                    </div>
                 </div>
             </div>
         </div>
