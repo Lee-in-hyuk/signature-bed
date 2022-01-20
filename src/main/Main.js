@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from "antd";
 import 'antd/dist/antd.min.css';
 import { ImYoutube } from 'react-icons/im';
+import { VscClose } from "react-icons/vsc";
 import './main.scss';
 import { Link } from 'react-router-dom';
 
@@ -26,7 +27,6 @@ function Main() {
                 </div>
                 <div id='con_img01' className='container1'>
                     <img src='signature-bed-image/container1.jpg' alt='video'/>
-                    {/* <a href='https://youtu.be/3xfTtMlKcWs'><span><ImYoutube/></span></a> */}
                     <Link to="/Video"><span><ImYoutube/></span></Link>
                 </div>
             </div>
@@ -86,9 +86,10 @@ function Main() {
                     <div id='con4_right'>
                         <img src='signature-bed-image/container4-2.jpg' alt='con4-2'/>
                         <div id='con4_text'>
-                            <div id='text4'>
-                                {/* 텍스트, 아이콘, 텍스트 */}
-                            </div>
+                            <span>SIGNATURE BED <VscClose/> 수면환경연구소</span>
+                            <h2>SLEEP STUDIO</h2>
+                            <p>작은 것 하나까지 세심하게 고민해 만든 제품.<br/>
+                            바라는 것은 단 하나 시그니처베드와 함께 완벽한 숙면을 하는 것.</p>
                         </div>
                     </div>
                 </div>

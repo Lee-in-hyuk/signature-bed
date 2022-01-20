@@ -192,7 +192,7 @@
         position: relative;
         display: flex;
         height: 680px;
-        h1 {
+        >h1 {
             position: absolute;
             width: 100%;
             height: 100px;
@@ -202,6 +202,7 @@
             justify-content: center;
             align-items: center;
             color: #fff;
+            z-index: 3;
         }
         .container4 {
             width: 100%;
@@ -216,11 +217,28 @@
                 }
             }
             #con4_right {
+                position: relative;
                 width: 50%;
                 height: 600px;
                 img {
                     width: 100%;
                     height: 600px;
+                }
+                #con4_text {
+                    position: absolute;
+                    top: 200px;
+                    left: 30px;
+                    color: #fff;
+                    span {
+                        vertical-align:middle;
+                        font-size: 28px;
+                        svg { vertical-align:middle; width: 30px; height: 30px; }
+                    }
+                    h2 {
+                        font-weight: bolder;
+                        font-size: 46px;
+                        color: #fff;
+                    }
                 }
             }
         }
