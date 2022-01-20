@@ -77,6 +77,22 @@ function Main() {
                     </div>
                 </div>
             </div>
+            <div id='container04'>
+                <h1>LAB</h1>
+                <div className='container4'>
+                    <div id='con4_left'>
+                        <img src='signature-bed-image/container4-1.gif' alt='con4-1'/>
+                    </div>
+                    <div id='con4_right'>
+                        <img src='signature-bed-image/container4-2.jpg' alt='con4-2'/>
+                        <div id='con4_text'>
+                            <div id='text4'>
+                                {/* 텍스트, 아이콘, 텍스트 */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
