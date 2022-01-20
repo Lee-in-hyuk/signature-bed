@@ -3,6 +3,7 @@ import Header from './include/Header';
 import Main from './main/Main';
 import { Routes, Route } from 'react-router-dom';
 import Video from './components/Video';
+import Footer from './include/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path='/video' element={<Video/>}/>
       </Routes>
       <Main/>
+      <Footer/>
     </div>
   );
 }

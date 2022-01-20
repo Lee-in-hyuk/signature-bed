@@ -73,3 +73,22 @@ video {
   top: 600px;
   left: 300px;
 }
+#footer {
+  background-color: #2D323D;
+  color: #98a2aa;
+  text-align: center;
+}
+#ft_text {
+  font-size: 12px;
+  padding-top: 20px;
+}
+#ft_text span {
+  padding: 0 5px;
+}
+#ft_text span:not(:last-child){
+  border-right: 1px solid #aaa;
+}
+#ft_copy {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
