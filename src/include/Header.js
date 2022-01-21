@@ -9,7 +9,7 @@ function Header() {
                 <li><Link to='/'>HOME</Link></li>
                 <li><Link to='/'>COLLECTION</Link>
                     <ul id='sub_menu1'>
-                        <li><Link to='/'>SIGNATURE BASIC</Link></li>
+                        <li><Link to='/collection1'>SIGNATURE BASIC</Link></li>
                         <li><Link to='/'>SIGNATURE G2</Link></li>
                         <li><Link to='/'>SIGNATURE ACTIVE</Link></li>
                     </ul>
