@@ -4,16 +4,18 @@ import Main from './main/Main';
 import { Routes, Route } from 'react-router-dom';
 import Video from './components/Video';
 import Footer from './include/Footer';
+import Test from './main/Test';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      {/* <Header/>
       <Routes>
-        <Route path='/video' element={<Video/>}/>
+        <Route path='/Video' element={<Video/>}/>
       </Routes>
       <Main/>
-      <Footer/>
+      <Footer/> */}
+      <Test/>
     </div>
   );
 }

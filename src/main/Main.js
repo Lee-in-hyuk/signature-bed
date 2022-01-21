@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Carousel } from "antd";
 import 'antd/dist/antd.min.css';
 import { ImYoutube } from 'react-icons/im';
 import { VscClose } from "react-icons/vsc";
 import './main.scss';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 function Main() {
+    // 모달 상태변화 설정
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     return (
         <div id='wrap'>
             <div className='slide-image'>
@@ -28,6 +31,7 @@ function Main() {
                 <div id='con_img01' className='container1'>
                     <img src='signature-bed-image/container1.jpg' alt='video'/>
                     <Link to="/Video"><span><ImYoutube/></span></Link>
+                    <Modal><video src='signature-bed-image/video.mp4' width="1200px" height="800px" controls/></Modal>
                 </div>
             </div>
             <div id='container02'>
