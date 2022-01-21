@@ -5,24 +5,12 @@ import { ImYoutube } from 'react-icons/im';
 import { VscClose } from "react-icons/vsc";
 import './main.scss';
 import Modal from 'react-modal';
-import { Link } from 'react-router-dom';
 
 function Main() {
     // 모달 상태변화 설정
     const [modalIsOpen, setModalIsOpen] = useState(false);
     return (
         <div id='wrap'>
-            <div className='header'>
-            <h1>SIGNATURE BED</h1>
-            <ul>
-                <Link to='/'><li>HOME</li></Link>
-                <li>COLLECTION</li>
-                <li>PRODUCT</li>
-                <li>STORE</li>
-                <li>ABOUT</li>
-                <li>NOTICE</li>
-            </ul>
-        </div>
             <div className='slide-image'>
                 <Carousel autoplay={true} autoplaySpeed={3000} effect="fade">
                     <div><img src='signature-bed-image/slide-image01.jpg' alt='bed1'/></div>

@@ -20,24 +20,94 @@ a { text-decoration: none; color: inherit; }
   height: 80px;
   align-items: center;
 }
-.header h1{
+.header>h1>a{
+  font-size: 36px;
   color: #fff;
   width: 300px;
-  cursor: pointer;
 }
-.header ul {
-  display: flex;
+.header>ul {
+  padding-top: 1.8em;
+  display: inline-block;
 }
-.header ul li {
+.header > ul > li {
+  float: left;
   padding: 0 30px;
   transition: 0.5s;
   font-weight: bold;
+  height: 44px;
+  /* hover용도 */
+  position: relative;
+}
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header > ul > li > a {
   color: #fff;
-  cursor: pointer;
+  font-size: 18px;
 }
-.header ul li:hover {
-  transform: scale(1.1);
+.header > ul > li:hover #sub_menu1,.header > ul > li:hover #sub_menu2 {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
 }
+/* 서브메뉴 */
+#sub_menu1 {
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  margin-top: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 150px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+}
+#sub_menu1 li {
+  margin-top: 8px;
+  padding-left: 4px;
+  width: 136px;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+#sub_menu1 li a, #sub_menu2 li a{
+  color: #fff;
+}
+#sub_menu1 li:hover, #sub_menu2 li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#sub_menu2 {
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  margin-top: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 200px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+}
+#sub_menu2 li {
+  margin-top: 8px;
+  padding-left: 4px;
+  width: 196px;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
 /* 비디오 영상 */
 /* #video_div {
   position: absolute;
