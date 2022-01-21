@@ -39,7 +39,7 @@ a { text-decoration: none; color: inherit; }
   transform: scale(1.1);
 }
 /* 비디오 영상 */
-#video_div {
+/* #video_div {
   position: absolute;
   top: 0;
   left: 0;
@@ -72,7 +72,7 @@ video {
   position: absolute;
   top: 600px;
   left: 300px;
-}
+} */
 #footer {
   background-color: #2D323D;
   color: #98a2aa;

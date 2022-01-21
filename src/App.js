@@ -2,20 +2,16 @@ import './App.css';
 import Header from './include/Header';
 import Main from './main/Main';
 import { Routes, Route } from 'react-router-dom';
-import Video from './components/Video';
 import Footer from './include/Footer';
-import Test from './main/Test';
 
 function App() {
   return (
     <div className="App">
-      {/* <Header/>
+      <Header/>
       <Routes>
-        <Route path='/Video' element={<Video/>}/>
+        <Route path='/' element={<Main/>}/>
       </Routes>
-      <Main/>
-      <Footer/> */}
-      <Test/>
+      <Footer/>
     </div>
   );
 }

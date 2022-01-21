@@ -4,7 +4,6 @@ import 'antd/dist/antd.min.css';
 import { ImYoutube } from 'react-icons/im';
 import { VscClose } from "react-icons/vsc";
 import './main.scss';
-import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 
 function Main() {
@@ -30,8 +29,35 @@ function Main() {
                 </div>
                 <div id='con_img01' className='container1'>
                     <img src='signature-bed-image/container1.jpg' alt='video'/>
-                    <Link to="/Video"><span><ImYoutube/></span></Link>
-                    <Modal><video src='signature-bed-image/video.mp4' width="1200px" height="800px" controls/></Modal>
+                    <span onClick={()=> setModalIsOpen(true)}><ImYoutube/></span>
+                    <div id='modal'>
+                        <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}
+                        ariaHideApp={false}
+                        style={{
+                            overlay: {
+                              position: 'fixed',
+                              top: 0,
+                              left: 0,
+                              right: 0,
+                              bottom: 0,
+                              backgroundColor: 'rgba(255, 255, 255, 0.5)'
+                            },
+                            content: {
+                              position: 'absolute',
+                              top: 'calc(50% - 300px)',
+                              left: 'calc(50% - 400px)',
+                              border:'none',
+                              background: 'none',
+                              WebkitOverflowScrolling: 'touch',
+                              overflow: 'unset',
+                              width:'300px',
+                              height: '300px',
+                            }
+                          }}
+                        >
+                            <video src='signature-bed-image/video.mp4' width="800px" height="600px" controls/>
+                        </Modal>
+                    </div>
                 </div>
             </div>
             <div id='container02'>
