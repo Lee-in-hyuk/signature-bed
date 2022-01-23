@@ -113,7 +113,8 @@
         }
         .fir_img {
             position: absolute;
-            opacity: 0.7;
+            opacity: 1;
+            transition: 0.5s;
             .fir_txt {
                 color: #fff;
                 position: absolute;
@@ -131,9 +132,9 @@
                     color: #CCCACB;
                 }
             }
-            >img {
-                
-            }
+        }
+        .fir_img:hover {
+            opacity: 0;
         }
     }
 }
