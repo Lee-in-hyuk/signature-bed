@@ -34,9 +34,10 @@ a { text-decoration: none; color: inherit; }
   padding: 0 30px;
   transition: 0.5s;
   font-weight: bold;
-  height: 44px;
+  height: 38px;
   /* hover용도 */
   position: relative;
+  overflow: hidden;
 }
 .clear::after {
   content: "";
@@ -46,6 +47,9 @@ a { text-decoration: none; color: inherit; }
 .header > ul > li > a {
   color: #fff;
   font-size: 18px;
+}
+.header > ul > li:hover {
+  overflow: visible;
 }
 .header > ul > li:hover #sub_menu1,.header > ul > li:hover #sub_menu2 {
   display: flex;
