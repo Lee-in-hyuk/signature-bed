@@ -57,7 +57,7 @@ function Collection1() {
                     <div className='fir_img'>
                         <div className='fir_txt'>
                             <p><VscAdd/></p>
-                            <span>토퍼 매트리스<strong>[일체형]</strong></span>
+                            <span>토퍼 매트리스<br/><strong>[일체형]</strong></span>
                             <p>5.5T</p>
                         </div>
                         <img src='signature-bed-image/col1_con3_2.jpg' alt='con3'/>
@@ -70,7 +70,7 @@ function Collection1() {
                     <div className='fir_img'>
                         <div className='fir_txt'>
                             <p><VscAdd/></p>
-                            <span>토퍼 매트리스<strong>[접이식]</strong></span>
+                            <span>토퍼 매트리스<br/><strong>[접이식]</strong></span>
                             <p>5T</p>
                         </div>
                         <img src='signature-bed-image/col1_con3_3.jpg' alt='con3'/>
