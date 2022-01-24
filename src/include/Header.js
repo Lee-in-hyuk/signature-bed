@@ -16,10 +16,10 @@ function Header() {
                 </li>
                 <li><Link to='/'>PRODUCT</Link>
                     <ul id='sub_menu2'>
-                        <li><Link to='/'>TOPPER</Link></li>
-                        <li><Link to='/'>MATRESS(ALL-IN-ONE)</Link></li>
-                        <li><Link to='/'>MATRESS(FOLDABE)</Link></li>
-                        <li><Link to='/'>MOTION BED</Link></li>
+                        <li><Link to='/product1'>TOPPER</Link></li>
+                        <li><Link to='/product2'>MATRESS(ALL-IN-ONE)</Link></li>
+                        <li><Link to='/product3'>MATRESS(FOLDABE)</Link></li>
+                        <li><Link to='/product4'>MOTION BED</Link></li>
                     </ul>
                 </li>
                 <li><Link to='/'>STORE</Link></li>
