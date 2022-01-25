@@ -22,13 +22,13 @@ function Product4() {
             </div>
             <div id='prd4_container1'>
                 {/* 텍스트 줄 마다 애니메이션 넣어보기 */}
-                <h1>To signature bed person<br/>“Good frame with signature bed”</h1>
+                <h1 className='ani_fir'>To signature bed person</h1><br/><h1 className='ani_sec'>“Good frame with signature bed”</h1>
                 <img src='signature-bed-image/prd4_con1.jpg' alt='con1'/>
             </div>
             <div id='prd4_container2'>
                 {/* 텍스트 줄 마다 애니메이션 넣어보기 */}
-                <span>“Sleep covers your eyes Good, evil, forgetting everything.” –Homer-<br/>
-                “잠은 눈꺼풀을 덮어 선한 것, 악한 것, 모든 것을 잊게 하는 것.” –호메로스-</span>
+                <span className='ani_fir'>“Sleep covers your eyes Good, evil, forgetting everything.” –Homer-</span><br/>
+                <span className='ani_sec'>“잠은 눈꺼풀을 덮어 선한 것, 악한 것, 모든 것을 잊게 하는 것.” –호메로스-</span>
             </div>
             <div id='prd4_container3'>
                 <img src='signature-bed-image/prd4_con3.jpg' alt='con3'/>

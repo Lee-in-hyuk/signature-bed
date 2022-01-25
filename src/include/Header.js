@@ -22,9 +22,9 @@ function Header() {
                         <li><Link to='/product4'>MOTION BED</Link></li>
                     </ul>
                 </li>
-                <li><Link to='/'>STORE</Link></li>
-                <li><Link to='/'>ABOUT</Link></li>
-                <li><Link to='/'>NOTICE</Link></li>
+                <li><Link to='/store'>STORE</Link></li>
+                <li><Link to='/about'>ABOUT</Link></li>
+                <li><Link to='/notice'>NOTICE</Link></li>
             </ul>
         </div>
     );
