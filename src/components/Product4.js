@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ImYoutube } from 'react-icons/im';
 import './product4.scss';
 import Modal from 'react-modal';
-import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
+// import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
 
 function Product4() {
     // 모달 상태변화 설정
@@ -94,66 +94,87 @@ function Product4() {
                 </div>
                 <img src='signature-bed-image/prd4_con11.jpg' alt='con11'/>
             </div>
+            {/* 상품 정보 UI */}
             <div className='prd_info'>
                 <h1>구매추가정보</h1>
                 <div>
-                    <ul>
-                        <li><p>추천 고객<span><VscChevronDown className='fir_svg'/><VscChevronUp className='sec_svg'/></span></p>
-                            <ul>
-                                <li>잠자리 뒤척임이 심한 분</li>
-                                <li>허리와 척추가 약한 분</li>
-                                <li>침대에서 여러가지 업무를 해야하는 분</li>
-                            </ul>
-                        </li>
-                        <li><p>기술<span><VscChevronDown className='fir_svg'/><VscChevronUp className='sec_svg'/></span></p>
-                            <ul>
-                                <li>무소음 약 20dB</li>
-                                <li>요람을 닮은 X-모션 기능</li>
-                                <li>저주파수 수면 진동</li>
-                                <li>달빛을 담은 라이팅</li>
-                            </ul>
-                        </li>
-                        <li><p>인증<span><VscChevronDown className='fir_svg'/><VscChevronUp className='sec_svg'/></span></p>
-                            <ul>
-                                <li>라돈 안정 인증</li>
-                                <li>전기용품 안전 인증</li>
-                                <li>전자파 적합성 인증</li>
-                            </ul>
-                        </li>
-                        <li><p>A/S 정책<span><VscChevronDown className='fir_svg'/><VscChevronUp className='sec_svg'/></span></p>
-                            <ul>
-                                <li>몽가타 본사 제품과 동일한 서비스 적용</li>
-                                <li>프레임: 60개월 / 모터 및 부품:1년 (설치일 기준, 경우에 따라 유상/무상으로 서비스)</li>
-                                <li>*자세한 정책은 몽가타 고객센터 (1522-6248)를 통해 확인 가능합니다.</li>
-                            </ul>
-                        </li>
-                        <li><p>크기<span><VscChevronDown className='fir_svg'/><VscChevronUp className='sec_svg'/></span></p>
-                            <ul>
-                                <li><strong>바운서</strong></li>
-                                <li>SS:1520*2100*1000 (그레이)</li>
-                                <li>Q:1820*2100*1000 (네이비)</li>
-                                <li><strong>모션베드</strong></li>
-                                <li>SS:1520*2100*1000 (그레이)</li>
-                                <li>Q:1820*2100*1000 (네이비)</li>
-                            </ul>
-                        </li>
-                        <li><p>추천 제품<span><VscChevronDown className='fir_svg'/><VscChevronUp className='sec_svg'/></span></p>
-                            <ul>
-                                <li>몽가타 수면센서</li>
-                                <li>시그니처 액티브</li>
-                                <li>시그니처 G2</li>
-                                <li>시그니처 베이직</li>
-                            </ul>
-                        </li>
-                        <li><p>주의 사항<span><VscChevronDown className='fir_svg'/><VscChevronUp className='sec_svg'/></span></p>
-                            <ul>
-                                <li>유아나 애완동물이 프레임 후면에 들어가지 않도록 주의</li>
-                                <li>어린이의 경우 단독으로 모션베드를 작동하지 않도록 주의</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <details>
+                        <summary>
+                            추천 고객
+                        </summary>
+                        <ul className='subMenu'>
+                            <li>잠자리 뒤척임이 심한 분</li>
+                            <li>허리와 척추가 약한 분</li>
+                            <li>침대에서 여러가지 업무를 해야하는 분</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            기술
+                        </summary>
+                        <ul className='subMenu'>
+                            <li>무소음 약 20dB</li>
+                            <li>요람을 닮은 X-모션 기능</li>
+                            <li>저주파수 수면 진동</li>
+                            <li>달빛을 담은 라이팅</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            인증
+                        </summary>
+                        <ul className='subMenu'>
+                            <li>라돈 안정 인증</li>
+                            <li>전기용품 안전 인증</li>
+                            <li>전자파 적합성 인증</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            A/S 정책
+                        </summary>
+                        <ul className='subMenu'>
+                            <li>몽가타 본사 제품과 동일한 서비스 적용</li>
+                            <li>프레임: 60개월 / 모터 및 부품:1년 (설치일 기준, 경우에 따라 유상/무상으로 서비스)</li>
+                            <li>*자세한 정책은 몽가타 고객센터 (1522-6248)를 통해 확인 가능합니다.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            크기
+                        </summary>
+                        <ul className='subMenu'>
+                            <li><strong>바운서</strong></li>
+                            <li>SS:1520*2100*1000 (그레이)</li>
+                            <li>Q:1820*2100*1000 (네이비)</li>
+                            <li><strong>모션베드</strong></li>
+                            <li>SS:1520*2100*1000 (그레이)</li>
+                            <li>Q:1820*2100*1000 (네이비)</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            추천 제품
+                        </summary>
+                        <ul className='subMenu'>
+                            <li>몽가타 수면센서</li>
+                            <li>시그니처 액티브</li>
+                            <li>시그니처 G2</li>
+                            <li>시그니처 베이직</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            주의 사항
+                        </summary>
+                        <ul className='subMenu'>
+                            <li>유아나 애완동물이 프레임 후면에 들어가지 않도록 주의</li>
+                            <li>어린이의 경우 단독으로 모션베드를 작동하지 않도록 주의</li>
+                        </ul>
+                    </details>
                 </div>
             </div>
+            {/* / 상품 정보 UI */}
         </div>
     );
 }

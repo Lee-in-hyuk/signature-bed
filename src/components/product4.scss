@@ -7,8 +7,7 @@ a { text-decoration: none; color: inherit; }
         display: flex;
         justify-content: center;
         width: 100%;
-        margin: 70px 0 50px;
-        background-color: tan;
+        margin: 50px 0;
         .hd_left {
             display: flex;
             justify-content: center;
@@ -159,6 +158,7 @@ a { text-decoration: none; color: inherit; }
             }
         }
     }
+    // 정보 css
     .prd_info {
         margin: 100px 0;
         h1 {
@@ -167,23 +167,54 @@ a { text-decoration: none; color: inherit; }
         }
         div{
             margin: 0 auto;
-            background-color: lightsalmon;
             width: 50%;
-            >ul>li {
-                &:not(:first-child){
-                    margin-top: 10px;
+            details[open] summary ~ * {
+                animation: sweep .5s ease-in-out;
+            }
+            @keyframes sweep {
+                from {
+                    opacity: 0; margin-top: -20px;
                 }
-                >p {
-                    cursor: pointer;
-                    background-color: lightgreen;
-                    display: flex;
-                    justify-content: space-between;
-                    font-size: 20px;
-                    line-height: 1.5em;
-                    font-weight: 500;
-                    
+                to {
+                    opacity: 1; margin-top: 0;
+                }
+            }
+            // details[open] summary::marker {
+            //     svg {
+            //         transform: rotate(180deg);
+            //     }
+            // }
+            summary {
+                cursor: pointer;
+                text-align: left;
+                border-top: 1px solid #ddd;
+                margin-bottom: 10px;
+                transition: 0.5s;
+                font-size: 20px;
+                font-weight: bold;
+                &:hover {
+                    color: #f39800;
+                    font-weight: bolder;
+                }
+                // &::marker {
+                //     color: transparent;
+                // }
+            }
+            .subMenu {
+                text-align: left;
+                padding: 0;
+                color: #828282;
+                font-size: 16px;
+                font-weight: bold;
+                strong {
+                    font-size: 18px;
+                    margin-left: -10px;
+                }
+                li {
+                    padding-left: 10px;
                 }
             }
         }
     }
+    // /정보 css
 }
