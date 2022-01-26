@@ -12,6 +12,7 @@ import Product3 from './components/Product3';
 import Product4 from './components/Product4';
 import Store from './components/Store';
 import About from './components/About';
+import Board from './components/Board';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/product4' element={<Product4/>}/>
         <Route path='/store' element={<Store/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/board' element={<Board/>}/>
       </Routes>
       <Footer/>
     </div>
