@@ -13,7 +13,9 @@ import Product4 from './components/Product4';
 import Store from './components/Store';
 import About from './components/About';
 import Board from './components/Board';
-
+import Basic1 from './components/Basic1';
+import Basic2 from './components/Basic2';
+import Basic3 from './components/Basic3';
 
 function App() {
   return (
@@ -31,6 +33,9 @@ function App() {
         <Route path='/store' element={<Store/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/board' element={<Board/>}/>
+        <Route path='/basic1' element={<Basic1/>}/>
+        <Route path='/basic2' element={<Basic2/>}/>
+        <Route path='/basic3' element={<Basic3/>}/>
       </Routes>
       <Footer/>
     </div>

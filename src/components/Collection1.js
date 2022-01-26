@@ -1,6 +1,7 @@
 import React from 'react';
 import './collection1.scss';
 import { VscAdd } from "react-icons/vsc";
+import { Link } from 'react-router-dom';
 
 function Collection1() {
     return (
@@ -41,43 +42,49 @@ function Collection1() {
             </div>
             <div id='col1_container3'>
                 <div id='col1_container3_tp'>
-                    <div className='fir_img'>
-                        <div className='fir_txt'>
-                            <p><VscAdd/></p>
-                            <span>토퍼</span>
-                            <p>3T</p>
+                    <Link to='/basic1'>
+                        <div className='fir_img'>
+                            <div className='fir_txt'>
+                                <p><VscAdd/></p>
+                                <span>토퍼</span>
+                                <p>3T</p>
+                            </div>
+                            <img src='signature-bed-image/col1_con3_1.jpg' alt='con3'/>
                         </div>
-                        <img src='signature-bed-image/col1_con3_1.jpg' alt='con3'/>
-                    </div>
-                    <div className='sec_img'>
-                        <img src='signature-bed-image/col1_con3_1h.jpg' alt='con3'/>
-                    </div>
+                        <div className='sec_img'>
+                            <img src='signature-bed-image/col1_con3_1h.jpg' alt='con3'/>
+                        </div>
+                    </Link>
                 </div>
                 <div id='col1_container3_al'>
-                    <div className='fir_img'>
-                        <div className='fir_txt'>
-                            <p><VscAdd/></p>
-                            <span>토퍼 매트리스<br/><strong>[일체형]</strong></span>
-                            <p>5.5T</p>
+                    <Link to='/basic2'>
+                        <div className='fir_img'>
+                            <div className='fir_txt'>
+                                <p><VscAdd/></p>
+                                <span>토퍼 매트리스<br/><strong>[일체형]</strong></span>
+                                <p>5.5T</p>
+                            </div>
+                            <img src='signature-bed-image/col1_con3_2.jpg' alt='con3'/>
                         </div>
-                        <img src='signature-bed-image/col1_con3_2.jpg' alt='con3'/>
-                    </div>
-                    <div className='sec_img'>
-                        <img src='signature-bed-image/col1_con3_2h.jpg' alt='con3'/>
-                    </div>
+                        <div className='sec_img'>
+                            <img src='signature-bed-image/col1_con3_2h.jpg' alt='con3'/>
+                        </div>
+                    </Link>
                 </div>
                 <div id='col1_container3_fd'>
-                    <div className='fir_img'>
-                        <div className='fir_txt'>
-                            <p><VscAdd/></p>
-                            <span>토퍼 매트리스<br/><strong>[접이식]</strong></span>
-                            <p>5T</p>
+                    <Link to='/basic3'>
+                        <div className='fir_img'>
+                            <div className='fir_txt'>
+                                <p><VscAdd/></p>
+                                <span>토퍼 매트리스<br/><strong>[접이식]</strong></span>
+                                <p>5T</p>
+                            </div>
+                            <img src='signature-bed-image/col1_con3_3.jpg' alt='con3'/>
                         </div>
-                        <img src='signature-bed-image/col1_con3_3.jpg' alt='con3'/>
-                    </div>
-                    <div className='sec_img'>
-                        <img src='signature-bed-image/col1_con3_3h.jpg' alt='con3'/>
-                    </div>
+                        <div className='sec_img'>
+                            <img src='signature-bed-image/col1_con3_3h.jpg' alt='con3'/>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
