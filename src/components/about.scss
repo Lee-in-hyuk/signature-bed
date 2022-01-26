@@ -1,0 +1,163 @@
+#about_wrap {
+    padding-top: 80px;
+    width: 100%;
+    text-align: center;
+    h1 {
+        font-weight: bold;
+        font-size: 52px;
+        margin: 50px 0;
+    }
+    // con1
+    #about_container1 {
+        width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        #about_con1_img {
+            display: flex;
+            width: 50%;
+            #ab_con1_img_lf {
+                width: 48%;
+                #ab_con1_img_lf2 {
+                    margin-top: 8%;
+                    position: relative;
+                    span {
+                        text-align: center;
+                        display: block;
+                        background-color: rgba(50, 49, 56, 0.8);
+                        color: #fff;
+                        font-size: 20px;
+                        padding: 4% 0;
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                    }
+                }
+            }
+            #ab_con1_img_rg {
+                width: 48%;
+                margin-left: 4%;
+                margin-top: 8%;
+            }
+        }
+        #about_con1_txt {
+            width: 41%;
+            margin-left: 9%;
+            text-align: left;
+            h1 {
+                font-size: 50px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                margin-top: 44px;
+                font-family: 'Noto Sans KR', sans-serif;
+                color: #302927;
+            }
+            p {
+                font-size: 20px;
+                font-weight: 500;
+                color: #302927;
+                line-height: 1.4;
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    // con2
+    #about_container2 {
+        margin-top: 80px;
+        background-color: #f7f7f7;
+        #about_con2 {
+            width: 1170px;
+            margin: 0 auto;
+            padding: 80px 0;
+            display: flex;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            #about_con2_txt {
+                width: 50%;
+                text-align: left;
+                h1 {
+                    font-size: 50px;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                    margin-top: 45px;
+                    font-family: 'Noto Sans KR', sans-serif;
+                    color: #302927;
+                }
+                div {
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+                p {
+                    font-size: 20px;
+                    color: #302927;
+                    line-height: 1.4;
+                    strong { font-weight: bold; }
+                }
+            }
+            #about_con2_img {
+                width: 50%;
+            }
+        }
+    }
+    // con3
+    #about_container3 {
+        background-image: linear-gradient(0,#fff ,#fff 10%, #f7f7f7 10%);
+        #about_con3 {
+            width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            #about_con3_img {
+                width: 58.3333%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            #about_con3_txt {
+                width: 41.6667%;
+                // url 텍스트
+                .url_txt {
+                    padding-top: 66px;
+                    padding-left: 60px;
+                    text-align: left;
+                    header {
+                        font-weight: bold;
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                    footer {
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        .span_before {
+                            display: inline-block;
+                            background-color: #323138;
+                            width: 2.727em;
+                            height: 2px;
+                            margin-right: 1em;
+                        }
+                        .span_after {
+                            display: inline-block;
+                            background-color: #323138;
+                            width: 2.727em;
+                            height: 2px;
+                            margin-left: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -36,7 +36,7 @@ function Store() {
                     <p>전국 슬립앤슬립 매장에서 만나보실 수 있습니다<br/>
                     국내 침구 브랜드 인지도 1위 이브자리도 함께합니다</p>
                 </div>
-                <a id='store_con3_url'><FaMapMarkerAlt/> 체험 매장 찾기</a>
+                <a href='https://company.evezary.co.kr/store/info/' target="_blank" id='store_con3_url'><FaMapMarkerAlt/> 체험 매장 찾기</a>
                 <img src='signature-bed-image/store_con3.jpg' alt='con3'/>
             </div>
         </div>
