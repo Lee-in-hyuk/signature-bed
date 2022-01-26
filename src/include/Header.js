@@ -7,14 +7,14 @@ function Header() {
             <h1><Link to='/'>SIGNATURE BED</Link></h1>
             <ul>
                 <li><Link to='/'>HOME</Link></li>
-                <li><Link to='/'>COLLECTION</Link>
+                <li><Link to='/collection1'>COLLECTION</Link>
                     <ul id='sub_menu1'>
                         <li><Link to='/collection1'>SIGNATURE BASIC</Link></li>
                         <li><Link to='/collection2'>SIGNATURE G2</Link></li>
                         <li><Link to='/collection3'>SIGNATURE ACTIVE</Link></li>
                     </ul>
                 </li>
-                <li><Link to='/'>PRODUCT</Link>
+                <li><Link to='/product1'>PRODUCT</Link>
                     <ul id='sub_menu2'>
                         <li><Link to='/product1'>TOPPER</Link></li>
                         <li><Link to='/product2'>MATRESS(ALL-IN-ONE)</Link></li>

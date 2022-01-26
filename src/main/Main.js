@@ -5,6 +5,7 @@ import { ImYoutube } from 'react-icons/im';
 import { VscClose } from "react-icons/vsc";
 import './main.scss';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 function Main() {
     // 모달 상태변화 설정
@@ -13,9 +14,9 @@ function Main() {
         <div id='wrap'>
             <div className='slide-image'>
                 <Carousel autoplay={true} autoplaySpeed={3000} effect="fade">
-                    <div><img src='signature-bed-image/slide-image01.jpg' alt='bed1'/></div>
-                    <div><img src='signature-bed-image/slide-image02.jpg' alt='bed2'/></div>
-                    <div><img src='signature-bed-image/slide-image03.jpg' alt='bed3'/></div>
+                    <Link to='/collection3'><div><img src='signature-bed-image/slide-image01.jpg' alt='bed1'/></div></Link>
+                    <Link to='/collection2'><div><img src='signature-bed-image/slide-image02.jpg' alt='bed2'/></div></Link>
+                    <Link to='/collection1'><div><img src='signature-bed-image/slide-image03.jpg' alt='bed3'/></div></Link>
                 </Carousel>
             </div>
             <div id='container01'>
@@ -64,47 +65,59 @@ function Main() {
                 <h1>COLLECTION</h1>
                 <div className='container2'>
                     <div id='con2_left'>
-                        <div className='con2_child'>
-                            <div id='con2_text1'>
-                                <h3>SIGNATURE BASIC</h3>
-                                <span>똑똑한 사람들의 합리적인 선택</span>
+                        <Link to='/collection1'>
+                            <div className='con2_child'>
+                                <div id='con2_text1'>
+                                    <h3>SIGNATURE BASIC</h3>
+                                    <span>똑똑한 사람들의 합리적인 선택</span>
+                                </div>
+                                <img src='signature-bed-image/container2-1.jpg' alt='con2-1'/>
                             </div>
-                            <img src='signature-bed-image/container2-1.jpg' alt='con2-1'/>
-                        </div>
+                        </Link>
                     </div>
                     <div id='con2_right'>
-                        <div className='con2_child'>
-                            <div id='con2_text2'>
-                                <h3>SIGNATURE ACTIVE</h3>
-                                <span>유능한 사람들의 고급스러운 선택</span>
+                        <Link to='/collection3'>
+                            <div className='con2_child'>
+                                <div id='con2_text2'>
+                                    <h3>SIGNATURE ACTIVE</h3>
+                                    <span>유능한 사람들의 고급스러운 선택</span>
+                                </div>
+                                <img src='signature-bed-image/container2-2.jpg' alt='con2-2'/>
                             </div>
-                            <img src='signature-bed-image/container2-2.jpg' alt='con2-2'/>
-                        </div>
-                        <div className='con2_child'>
-                            <div id='con2_text3'>
-                                <h3>SIGNATURE G2</h3>
-                                <span>열정적인 사람들의 탁월한 선택</span>
+                        </Link>
+                        <Link to='/collection2'>
+                            <div className='con2_child'>
+                                <div id='con2_text3'>
+                                    <h3>SIGNATURE G2</h3>
+                                    <span>열정적인 사람들의 탁월한 선택</span>
+                                </div>
+                                <img src='signature-bed-image/container2-3.jpg' alt='con2-3'/>
                             </div>
-                            <img src='signature-bed-image/container2-3.jpg' alt='con2-3'/>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
             <div id='container03'>
                 <h1>PRODUCTS</h1>
                 <div className='container3'>
-                    <div id='con3_1' className='con3_child'>
-                        <h3>TOPPER</h3>
-                        <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
-                    </div>
-                    <div id='con3_2' className='con3_child'>
-                        <h3>TOPPER<br/>MATTRESS</h3>
-                        <img src='signature-bed-image/container3-2.jpg' alt='con3-2'/>
-                    </div>
-                    <div id='con3_3' className='con3_child'>
-                        <h3>MOTION<br/>BED</h3>
-                        <img src='signature-bed-image/container3-3.jpg' alt='con3-3'/>
-                    </div>
+                    <Link to='/product1'>
+                        <div id='con3_1' className='con3_child'>
+                            <h3>TOPPER</h3>
+                            <img src='signature-bed-image/container3-1.jpg' alt='con3-1'/>
+                        </div>
+                    </Link>
+                    <Link to='/product2'>
+                        <div id='con3_2' className='con3_child'>
+                            <h3>TOPPER<br/>MATTRESS</h3>
+                            <img src='signature-bed-image/container3-2.jpg' alt='con3-2'/>
+                        </div>
+                    </Link>
+                    <Link to='/product4'>
+                        <div id='con3_3' className='con3_child'>
+                            <h3>MOTION<br/>BED</h3>
+                            <img src='signature-bed-image/container3-3.jpg' alt='con3-3'/>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div id='container04'>

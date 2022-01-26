@@ -63,7 +63,7 @@ function About() {
                     </div>
                     <div id='about_con3_txt'>
                         <div className='url_txt'>
-                            <Link to='/collection1'>
+                            <Link to='/collection3'>
                                 <header>SIGNATURE ACTIVE</header>
                                 <p>고기능성 제품과 모션베드 최적화 토퍼<br/>
                                     독립 폼스프링 방식의 탁월한 기능
@@ -112,8 +112,8 @@ function About() {
                     </div>
                     <div id='about_con5_txt'>
                         <div className='url_txt'>
-                            <Link to='/collection3'>
-                                <header>SIGNATURE ACTIVE</header>
+                            <Link to='/collection1'>
+                                <header>SIGNATURE BASIC</header>
                                 <p>고기능성 제품과 모션베드 최적화 토퍼<br/>
                                     독립 폼스프링 방식의 탁월한 기능
                                 </p>

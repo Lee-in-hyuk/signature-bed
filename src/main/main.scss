@@ -77,6 +77,10 @@
             .con2_child {
                 margin: 10px;
                 position: relative;
+                transition: 0.5s;
+                &:hover {
+                    opacity: 0.9;
+                }
             } 
             #con2_left {
                 width: 50%;
@@ -85,7 +89,7 @@
                 #con2_text1 {
                     position: absolute;
                     top: 80px;
-                    right: 30px;
+                    left: 30px;
                     h3 {
                         color: #fff;
                         font-size: 30px;
