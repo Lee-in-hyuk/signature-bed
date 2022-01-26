@@ -1,6 +1,7 @@
 import React from 'react';
 import './store.scss';
 import { VscClose } from "react-icons/vsc";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 function Store() {
     return (
@@ -15,10 +16,28 @@ function Store() {
                 <div id='store_con1_img'><img src='signature-bed-image/store_con1.jpg' alt='con1'/></div>
             </div>
             <div id='store_container2'>
-                
+                <div id='store_con2_left'>
+                    <div id='con2_img_lf'>
+                        <img src='signature-bed-image/store_con2_left1.jpg' alt='con2'/>
+                        <img src='signature-bed-image/store_con2_left2.jpg' alt='con2'/>
+                    </div>
+                    <div id='con2_img_rg'>
+                        <img src='signature-bed-image/store_con2_right.jpg' alt='con2'/>
+                    </div>
+                </div>
+                <div id='store_con2_right'>
+                    <img src='signature-bed-image/store_con2_txtimg.png' alt='con2'/>
+                </div>
             </div>
             <div id='store_container3'>
-                
+                <div id='store_con3_txt'>
+                    <h1>SIGNATURE BED</h1>
+                    <strong>Store</strong><br/>
+                    <p>전국 슬립앤슬립 매장에서 만나보실 수 있습니다<br/>
+                    국내 침구 브랜드 인지도 1위 이브자리도 함께합니다</p>
+                </div>
+                <a id='store_con3_url'><FaMapMarkerAlt/> 체험 매장 찾기</a>
+                <img src='signature-bed-image/store_con3.jpg' alt='con3'/>
             </div>
         </div>
     );
