@@ -92,11 +92,12 @@
                 }
                 div {
                     font-size: 30px;
-                    font-weight: 500;
+                    font-weight: 600;
                     margin-bottom: 30px;
                 }
                 p {
                     font-size: 20px;
+                    font-weight: 500;
                     color: #302927;
                     line-height: 1.4;
                     strong { font-weight: bold; }
@@ -139,24 +140,182 @@
                     }
                     footer {
                         font-size: 12px;
-                        display: flex;
-                        align-items: center;
-                        .span_before {
-                            display: inline-block;
-                            background-color: #323138;
-                            width: 2.727em;
-                            height: 2px;
-                            margin-right: 1em;
-                        }
-                        .span_after {
-                            display: inline-block;
-                            background-color: #323138;
-                            width: 2.727em;
-                            height: 2px;
-                            margin-left: 1em;
+                        overflow: hidden;
+                        width: 80px;
+                        >span{
+                            transition: 0.5s;
+                            display: flex;
+                            align-items: center;
+                            .span_before {
+                                display: inline-block;
+                                background-color: #323138;
+                                width: 30px;
+                                height: 2px;
+                                margin-right: 10px;
+                                padding-right: 30px;
+                            }
+                            .span_txt {
+                                width: 30px;
+                            }
+                            .span_after {
+                                display: inline-block;
+                                background-color: #323138;
+                                width: 30px;
+                                height: 2px;
+                                margin-left: 10px;
+                                padding-left: 30px;
+                            }
                         }
                     }
+                    &:hover a {
+                        color: #323138;
+                    }
+                    &:hover footer>span {
+                        transform: translateX(-30px);
+                    }
                 }
+                // /url 텍스트
+            }
+        }
+    }
+    // con4
+    #about_container4 {
+        margin: 80px 0;
+        #about_con4 {
+            width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            #about_con4_img {
+                width: 58.3333%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            #about_con4_txt {
+                width: 41.6667%;
+                // url 텍스트
+                .url_txt {
+                    padding-top: 66px;
+                    padding-right: 60px;
+                    text-align: left;
+                    header {
+                        font-weight: bold;
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                    footer {
+                        font-size: 12px;
+                        overflow: hidden;
+                        width: 80px;
+                        >span{
+                            transition: 0.5s;
+                            display: flex;
+                            align-items: center;
+                            .span_before {
+                                display: inline-block;
+                                background-color: #323138;
+                                width: 30px;
+                                height: 2px;
+                                margin-right: 10px;
+                                padding-right: 30px;
+                            }
+                            .span_txt {
+                                width: 30px;
+                            }
+                            .span_after {
+                                display: inline-block;
+                                background-color: #323138;
+                                width: 30px;
+                                height: 2px;
+                                margin-left: 10px;
+                                padding-left: 30px;
+                            }
+                        }
+                    }
+                    &:hover a {
+                        color: #323138;
+                    }
+                    &:hover footer>span {
+                        transform: translateX(-30px);
+                    }
+                }
+                // /url 텍스트
+            }
+        }
+    }
+    // con5
+    #about_container5 {
+        background-image: linear-gradient(0,#f7f7f7 ,#f7f7f7 84%, #fff 84%);
+        padding: 50px 0 100px;
+        #about_con5 {
+            width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            #about_con5_img {
+                width: 58.3333%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            #about_con5_txt {
+                width: 41.6667%;
+                // url 텍스트
+                .url_txt {
+                    padding-top: 66px;
+                    padding-left: 60px;
+                    text-align: left;
+                    header {
+                        font-weight: bold;
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                    footer {
+                        font-size: 12px;
+                        overflow: hidden;
+                        width: 80px;
+                        >span{
+                            transition: 0.5s;
+                            display: flex;
+                            align-items: center;
+                            .span_before {
+                                display: inline-block;
+                                background-color: #323138;
+                                width: 30px;
+                                height: 2px;
+                                margin-right: 10px;
+                                padding-right: 30px;
+                            }
+                            .span_txt {
+                                width: 30px;
+                            }
+                            .span_after {
+                                display: inline-block;
+                                background-color: #323138;
+                                width: 30px;
+                                height: 2px;
+                                margin-left: 10px;
+                                padding-left: 30px;
+                            }
+                        }
+                    }
+                    &:hover a {
+                        color: #323138;
+                    }
+                    &:hover footer>span {
+                        transform: translateX(-30px);
+                    }
+                }
+                // /url 텍스트
             }
         }
     }

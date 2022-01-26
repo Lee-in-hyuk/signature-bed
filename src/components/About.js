@@ -69,9 +69,11 @@ function About() {
                                     독립 폼스프링 방식의 탁월한 기능
                                 </p>
                                 <footer>
-                                    <span className='span_before'></span>
-                                    <span>MORE</span>
-                                    <span className='span_after'></span>
+                                    <span>
+                                        <span className='span_before'></span>
+                                        <span className='span_txt'>MORE</span>
+                                        <span className='span_after'></span>
+                                    </span>
                                 </footer>
                             </Link>
                         </div>
@@ -79,10 +81,53 @@ function About() {
                 </div>
             </div>
             <div id='about_container4'>
-
+                <div id='about_con4'>
+                    <div id='about_con4_txt'>
+                        <div className='url_txt'>
+                            <Link to='/collection2'>
+                                <header>SIGNATURE G2</header>
+                                <p>디자인까지 유니크한 하이엔드 토퍼<br/>
+                                    쿨겔흑연 특수폼과 체온조절 원사를 사용해<br/>
+                                    열을 빠르게 배출
+                                </p>
+                                <footer>
+                                    <span>
+                                        <span className='span_before'></span>
+                                        <span className='span_txt'>MORE</span>
+                                        <span className='span_after'></span>
+                                    </span>
+                                </footer>
+                            </Link>
+                        </div>
+                    </div>
+                    <div id='about_con4_img'>
+                        <img src='signature-bed-image/about_con4.jpg' alt='con4'/>
+                    </div>
+                </div>
             </div>
             <div id='about_container5'>
-
+                <div id='about_con5'>
+                    <div id='about_con5_img'>
+                        <img src='signature-bed-image/about_con5.jpg' alt='con5'/>
+                    </div>
+                    <div id='about_con5_txt'>
+                        <div className='url_txt'>
+                            <Link to='/collection3'>
+                                <header>SIGNATURE ACTIVE</header>
+                                <p>고기능성 제품과 모션베드 최적화 토퍼<br/>
+                                    독립 폼스프링 방식의 탁월한 기능
+                                </p>
+                                <footer>
+                                    <span>
+                                        <span className='span_before'></span>
+                                        <span className='span_txt'>MORE</span>
+                                        <span className='span_after'></span>
+                                    </span>
+                                </footer>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
