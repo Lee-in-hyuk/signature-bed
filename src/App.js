@@ -19,6 +19,7 @@ import Basic3 from './components/Basic3';
 import G2_01 from './components/G2_01';
 import G2_02 from './components/G2_02';
 import G2_03 from './components/G2_03';
+import Active from './components/Active';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path='/g2_01' element={<G2_01/>}/>
         <Route path='/g2_02' element={<G2_02/>}/>
         <Route path='/g2_03' element={<G2_03/>}/>
+        <Route path='/active' element={<Active/>}/>
       </Routes>
       <Footer/>
     </div>

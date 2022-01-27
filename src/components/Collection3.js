@@ -1,6 +1,7 @@
 import React from 'react';
 import './collection3.scss';
 import { VscAdd } from "react-icons/vsc";
+import { Link } from 'react-router-dom';
 
 function Collection3() {
     return (
@@ -41,17 +42,19 @@ function Collection3() {
             </div>
             <div id='col3_container3'>
                 <div id='col3_container3_tp'>
-                    <div className='fir_img'>
-                        <div className='fir_txt'>
-                            <p><VscAdd/></p>
-                            <span>토퍼매트리스</span>
-                            <p>8T</p>
+                    <Link to='/active'>
+                        <div className='fir_img'>
+                            <div className='fir_txt'>
+                                <p><VscAdd/></p>
+                                <span>토퍼매트리스</span>
+                                <p>8T</p>
+                            </div>
+                            <img src='signature-bed-image/col3_con3_1.jpg' alt='con3'/>
                         </div>
-                        <img src='signature-bed-image/col3_con3_1.jpg' alt='con3'/>
-                    </div>
-                    <div className='sec_img'>
-                        <img src='signature-bed-image/col3_con3_1h.jpg' alt='con3'/>
-                    </div>
+                        <div className='sec_img'>
+                            <img src='signature-bed-image/col3_con3_1h.jpg' alt='con3'/>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
