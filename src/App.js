@@ -16,6 +16,9 @@ import Board from './components/Board';
 import Basic1 from './components/Basic1';
 import Basic2 from './components/Basic2';
 import Basic3 from './components/Basic3';
+import G2_01 from './components/G2_01';
+import G2_02 from './components/G2_02';
+import G2_03 from './components/G2_03';
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
         <Route path='/basic1' element={<Basic1/>}/>
         <Route path='/basic2' element={<Basic2/>}/>
         <Route path='/basic3' element={<Basic3/>}/>
+        <Route path='/g2_01' element={<G2_01/>}/>
+        <Route path='/g2_02' element={<G2_02/>}/>
+        <Route path='/g2_03' element={<G2_03/>}/>
       </Routes>
       <Footer/>
     </div>
