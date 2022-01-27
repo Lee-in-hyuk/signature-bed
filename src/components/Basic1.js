@@ -57,11 +57,11 @@ function Basic1() {
                         }
                       }}
                     >
-                        <video src='signature-bed-image/basic1_video.mp4' width="800px" height="600px" controls/>
+                        <video src='signature-bed-image/basic_video.mp4' width="800px" height="600px" controls/>
                     </Modal>
                 </div>
             </div>
-            <div id='video_sub_txt'><span>* 몽가타 모션베드 디테일 영상</span></div>
+            <div id='video_sub_txt'><span>* 시그니처 베이직 디테일 영상</span></div>
             <div id='basic1_container4'>
                 <img src='signature-bed-image/basic1_con4.jpg' alt='con4'/>
             </div>
