@@ -99,4 +99,157 @@ a { text-decoration: none; color: inherit; }
             }
         }
     }
+    #basic1_container2 {
+        margin: 70px 0;
+        span {
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'jost',"Noto Sans KR", Helvetica, Arial, sans-serif;
+        }
+        .ani_fir {
+            animation-name: fir;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fir {
+            from {
+                opacity: 0; margin-left: -50px;
+            }
+            to {
+                opacity: 1; margin-left: 0;
+            }
+        }
+        .ani_sec {
+            animation-name: sec;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes sec {
+            from {
+                opacity: 0; margin-right: -50px;
+            }
+            to {
+                opacity: 1; margin-right: 0;
+            }
+        }
+    }
+    #basic1_container3 {
+        position: relative;
+        margin: 0 auto;
+        width: 1170px;
+        height: 660px;
+        overflow: hidden;
+        >span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: red;
+            cursor: pointer;
+            svg {
+                width: 84px;
+                height: 84px;
+                transition: 0.5s;
+                &:hover {
+                    color: #fff;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        img {
+            width: 1170px;
+            height: 660px;
+            transition: 0.8s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+    }
+    #video_sub_txt {
+        font-size: 20px;
+        margin: 20px auto;
+        span {
+            font-size: 20px;
+            font-weight: 700;
+            color: #828282;
+        }
+    }
+    #basic1_container4, #basic1_container6 {
+        margin: 80px auto;
+    }
+    #basic1_container5 {
+        background-color: #f7f7f7;
+        margin: 80px auto 0;
+        padding: 100px 0;
+    }
+    #basic1_container7 {
+        position: relative;
+        #basic1_container7_txt {
+            color: #fff;
+            position: absolute;
+            top: calc(50% - 500px);
+            left: calc(50% - 400px);
+            width: 800px;
+            h1 {
+                color: #fff;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            span {
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+    // 정보 css
+    .prd_info {
+        margin: 100px 0;
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        div{
+            margin: 0 auto;
+            width: 50%;
+            details[open] summary ~ * {
+                animation: sweep .5s ease-in-out;
+            }
+            @keyframes sweep {
+                from {
+                    opacity: 0; margin-top: -20px;
+                }
+                to {
+                    opacity: 1; margin-top: 0;
+                }
+            }
+            summary {
+                cursor: pointer;
+                text-align: left;
+                border-top: 1px solid #ddd;
+                margin-bottom: 10px;
+                transition: 0.5s;
+                font-size: 20px;
+                font-weight: bold;
+                &:hover {
+                    color: #f39800;
+                    font-weight: bolder;
+                }
+            }
+            .subMenu {
+                text-align: left;
+                padding: 0;
+                color: #828282;
+                font-size: 16px;
+                font-weight: bold;
+                strong {
+                    font-size: 18px;
+                    margin-left: -10px;
+                }
+                li {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    // /정보 css
 }
