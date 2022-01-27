@@ -18,7 +18,7 @@ function Header() {
                     <ul id='sub_menu2'>
                         <li><Link to='/product1'>TOPPER</Link></li>
                         <li><Link to='/product2'>MATRESS(ALL-IN-ONE)</Link></li>
-                        <li><Link to='/product3'>MATRESS(FOLDABE)</Link></li>
+                        <li><Link to='/product3'>MATRESS(FOLDABLE)</Link></li>
                         <li><Link to='/product4'>MOTION BED</Link></li>
                     </ul>
                 </li>
