@@ -41,7 +41,7 @@
     }
     #board_tb {
         width: 1170px;
-        margin: 0 auto 20%;
+        margin: 0 auto;
         thead {
             background-color: rgba(0, 0, 0, 0.5);
             tr th:nth-child(1) {
@@ -64,8 +64,8 @@
         }
     }
     #board_ft {
-        button {
-
-        }
+        width: 1170px;
+        margin: 100px auto 20px;
+        text-align: center;
     }
 }

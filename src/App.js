@@ -12,7 +12,7 @@ import Product3 from './components/Product3';
 import Product4 from './components/Product4';
 import Store from './components/Store';
 import About from './components/About';
-import Board from './components/Board';
+import Board from './components/board/Board';
 import Basic1 from './components/Basic1';
 import Basic2 from './components/Basic2';
 import Basic3 from './components/Basic3';
@@ -22,6 +22,62 @@ import G2_03 from './components/G2_03';
 import Active from './components/Active';
 
 function App() {
+  const sampleData = [
+    {
+      no:1,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:2,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:3,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:4,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:5,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:6,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:7,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:8,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+    {
+      no:9,
+      title: "basic",
+      description: '샘플1',
+      date: '22-01-28'
+    },
+  ]
   return (
     <div className="App">
       <Header/>
@@ -36,7 +92,7 @@ function App() {
         <Route path='/product4' element={<Product4/>}/>
         <Route path='/store' element={<Store/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/board' element={<Board/>}/>
+        <Route path='/board' element={<Board sampleData={sampleData}/>}/>
         <Route path='/basic1' element={<Basic1/>}/>
         <Route path='/basic2' element={<Basic2/>}/>
         <Route path='/basic3' element={<Basic3/>}/>
