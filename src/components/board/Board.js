@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './board.scss';
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@material-ui/core';
 import axios from 'axios';
 import { BiSearch } from "react-icons/bi";
 import BoardList from './BoardList';
+import CreateBoard from './CreateBoard';
+import Modal from 'react-modal';
 
 function Board({sampleData}) {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     
     return (
         <div id='board_wrap'>
@@ -48,7 +51,38 @@ function Board({sampleData}) {
                     <span>5</span>
                 </div>
             </div>
-            <button>글쓰기</button>
+            <div id='modal'>
+                <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}
+                    ariaHideApp={false}
+                    style={{
+                        overlay: {
+                          position: 'fixed',
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        },
+                        content: {
+                            position: 'absolute',
+                            top: 'calc(50% - 300px)',
+                            left: 'calc(50% - 400px)',
+                            border:'none',
+                            background: 'none',
+                            WebkitOverflowScrolling: 'touch',
+                            overflow: 'unset',
+                            width:'500px',
+                            height: '520px',
+                            backgroundColor: '#fff',
+                            border: '1px solid #eee',
+                            borderRadius: '10px'
+                        }
+                      }}
+                    >
+                    <CreateBoard/>
+                </Modal>
+            </div>
+            <span onClick={()=> setModalIsOpen(true)}>글쓰기</span>
         </div>
     );
 }

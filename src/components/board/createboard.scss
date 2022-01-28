@@ -1,0 +1,40 @@
+#create_wrap {
+    strong {
+        color: red;
+    }
+    #create_hd {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 10px;
+        border-bottom: 1px solid rgba(224, 224, 224, 1);
+        h2 { font-weight: bold; }
+        p {
+            font-size: 12px;
+        }
+    }
+    #input_div {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        input {
+            cursor: pointer;
+            margin: 0 20px;
+            line-height: 2;
+            width: 100px;
+            height: 40px;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+    }
+    .createTable {
+        input, textarea {
+            border-radius: 6px;
+            padding: 0 10px;
+        }
+    }
+}
