@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './board.scss';
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@material-ui/core';
 import axios from 'axios';
@@ -8,17 +8,19 @@ import BoardList from './BoardList';
 import CreateBoard from './CreateBoard';
 import Modal from 'react-modal';
 
-async function getBoards(){
-    const response = await axios.get('http://localhost:8080/board')
-    return response.data;
-}
 
 function Board() {
+    // 페이지네이션 작업
+    async function getBoards(){
+        const response = await axios.get('http://localhost:8080/board')
+        return response.data;
+    }
+    // 모달 작업
     const [modalIsOpen, setModalIsOpen] = useState(false);
+
     const state = useAsync(getBoards);
     const { loading, error, data:board } = state;
-    // console.log(customers);
-    console.log(board)
+    // console.log(board)
     // 로딩중이라면 ?
     if(loading) return <div>로딩중....</div>
     // 에러가 발생했다면 ?
@@ -52,13 +54,13 @@ function Board() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {/* 나중에 map써서 db에 있는 데이터 받아오기 */}
                     {board.map(data=>(
                         <BoardList data={data} key={data.no}/>
                     ))}
                 </TableBody>
             </Table>
             <div id='board_ft'>
+                {/* Pagination넣을 부분 */}
                 <div id='page_num'>
                     <span>1</span>
                     <span>2</span>
