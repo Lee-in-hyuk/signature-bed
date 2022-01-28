@@ -2,14 +2,30 @@ import React, { useState } from 'react';
 import './board.scss';
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@material-ui/core';
 import axios from 'axios';
+import useAsync from '../../hooks/useAsync';
 import { BiSearch } from "react-icons/bi";
 import BoardList from './BoardList';
 import CreateBoard from './CreateBoard';
 import Modal from 'react-modal';
 
-function Board({sampleData}) {
+async function getBoards(){
+    const response = await axios.get('http://localhost:8080/board')
+    return response.data;
+}
+
+function Board() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    
+    const state = useAsync(getBoards);
+    const { loading, error, data:board } = state;
+    // console.log(customers);
+    console.log(board)
+    // 로딩중이라면 ?
+    if(loading) return <div>로딩중....</div>
+    // 에러가 발생했다면 ?
+    if(error) return <div>페이지를 나타낼 수 없습니다.</div>
+    // 데이터가 없으면 ?
+    if(!board) return null;
+    // 위에 작성한 if문들이 모두 아니면 !
     return (
         <div id='board_wrap'>
             <h1>Product List</h1>
@@ -37,7 +53,7 @@ function Board({sampleData}) {
                 </TableHead>
                 <TableBody>
                     {/* 나중에 map써서 db에 있는 데이터 받아오기 */}
-                    {sampleData.map(data=>(
+                    {board.map(data=>(
                         <BoardList data={data} key={data.no}/>
                     ))}
                 </TableBody>

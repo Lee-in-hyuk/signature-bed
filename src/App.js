@@ -92,7 +92,7 @@ function App() {
         <Route path='/product4' element={<Product4/>}/>
         <Route path='/store' element={<Store/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/board' element={<Board sampleData={sampleData}/>}/>
+        <Route path='/board' element={<Board/>}/>
         <Route path='/basic1' element={<Basic1/>}/>
         <Route path='/basic2' element={<Basic2/>}/>
         <Route path='/basic3' element={<Basic3/>}/>
