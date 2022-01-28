@@ -7,20 +7,34 @@ import { BiSearch } from "react-icons/bi";
 import BoardList from './BoardList';
 import CreateBoard from './CreateBoard';
 import Modal from 'react-modal';
+import Pagination from './Pagination';
 
 
 function Board() {
     // 페이지네이션 작업
-    async function getBoards(){
-        const response = await axios.get('http://localhost:8080/board')
-        return response.data;
-    }
+    // const [board, setPosts] = useState([]);
+    // // const [loading, setLoading] = useState(false);
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const [postsPerPage, setPostsPerPage] = useState(5);
+    // const indexOfLast = currentPage * postsPerPage;
+    // const indexOfFirst = indexOfLast - postsPerPage;
+    // function currentPosts(tmp) {
+        //     let currentPosts = 0;
+        //     currentPosts = tmp.slice(indexOfFirst, indexOfLast);
+        //     return currentPosts;
+        // }
+        // // console.log(indexOfFirst);
+        async function getBoards(){
+            const response = await axios.get('http://localhost:8080/board')
+            // return setPosts(response.data);
+            return response.data;
+        }
     // 모달 작업
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const state = useAsync(getBoards);
     const { loading, error, data:board } = state;
-    // console.log(board)
+    console.log(board)
     // 로딩중이라면 ?
     if(loading) return <div>로딩중....</div>
     // 에러가 발생했다면 ?
@@ -61,6 +75,7 @@ function Board() {
             </Table>
             <div id='board_ft'>
                 {/* Pagination넣을 부분 */}
+                {/* <Pagination  postsPerPage={postsPerPage} totalPosts={posts.length} paginate={setCurrentPage}/> */}
                 <div id='page_num'>
                     <span>1</span>
                     <span>2</span>
