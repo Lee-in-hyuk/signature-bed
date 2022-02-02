@@ -14,15 +14,15 @@ function Board() {
     // 페이지네이션 작업
     // const [board, setPosts] = useState([]);
     // // const [loading, setLoading] = useState(false);
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const [postsPerPage, setPostsPerPage] = useState(5);
-    // const indexOfLast = currentPage * postsPerPage;
-    // const indexOfFirst = indexOfLast - postsPerPage;
-    // function currentPosts(tmp) {
-        //     let currentPosts = 0;
-        //     currentPosts = tmp.slice(indexOfFirst, indexOfLast);
-        //     return currentPosts;
-        // }
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage, setPostsPerPage] = useState(5);
+    const indexOfLast = currentPage * postsPerPage;
+    const indexOfFirst = indexOfLast - postsPerPage;
+    function currentPosts(tmp) {
+            let currentPosts = 0;
+            currentPosts = tmp.slice(indexOfFirst, indexOfLast);
+            return currentPosts;
+        }
         // // console.log(indexOfFirst);
         async function getBoards(){
             const response = await axios.get('http://localhost:8080/board')
@@ -34,7 +34,7 @@ function Board() {
 
     const state = useAsync(getBoards);
     const { loading, error, data:board } = state;
-    console.log(board)
+    // console.log(board)
     // 로딩중이라면 ?
     if(loading) return <div>로딩중....</div>
     // 에러가 발생했다면 ?
@@ -71,7 +71,7 @@ function Board() {
                     {/* {board.map(data=>(
                         <BoardList data={data} key={data.no}/>
                     ))} */}
-                    <BoardList board={board}/>
+                    <BoardList board={currentPosts(board)} key={board.no}/>
                 </TableBody>
             </Table>
             <div id='modal'>
@@ -110,14 +110,14 @@ function Board() {
             </div>
             <div id='board_ft'>
                 {/* Pagination넣을 부분 */}
-                {/* <Pagination  postsPerPage={postsPerPage} totalPosts={posts.length} paginate={setCurrentPage}/> */}
-                <div id='page_num'>
+                <Pagination  postsPerPage={postsPerPage} totalPosts={board.length} paginate={setCurrentPage}/>
+                {/* <div id='page_num'>
                     <span>1</span>
                     <span>2</span>
                     <span>3</span>
                     <span>4</span>
                     <span>5</span>
-                </div>
+                </div> */}
             </div>
         </div>
     );
