@@ -68,9 +68,10 @@ function Board() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {board.map(data=>(
+                    {/* {board.map(data=>(
                         <BoardList data={data} key={data.no}/>
-                    ))}
+                    ))} */}
+                    <BoardList board={board}/>
                 </TableBody>
             </Table>
             <div id='modal'>
