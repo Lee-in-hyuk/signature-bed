@@ -63,6 +63,24 @@
             }
         }
     }
+    #enroll_btn {
+        width: 1170px;
+        margin: 30px auto 0;
+        display: flex;
+        justify-content: right;
+        span {
+            margin-right: 30px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            transition: 0.3s;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
     #board_ft {
         width: 1170px;
         margin: 100px auto 20px;

@@ -73,17 +73,6 @@ function Board() {
                     ))}
                 </TableBody>
             </Table>
-            <div id='board_ft'>
-                {/* Pagination넣을 부분 */}
-                {/* <Pagination  postsPerPage={postsPerPage} totalPosts={posts.length} paginate={setCurrentPage}/> */}
-                <div id='page_num'>
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                </div>
-            </div>
             <div id='modal'>
                 <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}
                     ariaHideApp={false}
@@ -115,7 +104,20 @@ function Board() {
                     <CreateBoard/>
                 </Modal>
             </div>
-            <span onClick={()=> setModalIsOpen(true)}>글쓰기</span>
+            <div id='enroll_btn'>
+                <span onClick={()=> setModalIsOpen(true)}>글쓰기</span>
+            </div>
+            <div id='board_ft'>
+                {/* Pagination넣을 부분 */}
+                {/* <Pagination  postsPerPage={postsPerPage} totalPosts={posts.length} paginate={setCurrentPage}/> */}
+                <div id='page_num'>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+            </div>
         </div>
     );
 }
