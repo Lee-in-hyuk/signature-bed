@@ -23,6 +23,18 @@ function Detailview() {
     if(loading) return <div>로딩중.......</div>
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>
     if(!board) return null;
+
+    // 삭제하기
+    const onDelete = () => {
+        axios.delete(`http://localhost:8080/board/${id}`)
+        .then((result)=>{
+            console.log('삭제되었습니다.');
+            navigate(-1);
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
+
     return (
         <div id='detail_wrap'>
             <h1>상품 상세 정보</h1>
@@ -43,8 +55,10 @@ function Detailview() {
                 </TableBody>
             </Table>
             <div id='detail_btn'>
-                {/* <button><Link to={`/edit/${board[0].c_no}`}>수정하기</Link></button>
-                <button onClick={onDelete}>삭제</button> */}
+                <div>
+                    {/* <button><Link to={`/edit/${board[0].c_no}`}>수정하기</Link></button> */}
+                    <button onClick={onDelete}>삭제</button>
+                </div>
                 <button onClick={(e)=>(e.preventDefault())}><Link to='/board'>리스트보기</Link></button>
             </div>
         </div>
