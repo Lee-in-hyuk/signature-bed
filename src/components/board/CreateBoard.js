@@ -14,7 +14,18 @@ function CreateBoard() {
                     <TableBody>
                         <TableRow>
                             <TableCell>제목 <strong>*</strong></TableCell>
-                            <TableCell><input name='title' required type="text"/></TableCell>
+                            {/* <TableCell><input name='title' required type="text"/></TableCell> */}
+                            <TableCell>
+                                <select name='title' required>
+                                    <option value='basic'>Basic</option>
+                                    <option value='g2'>G2</option>
+                                    <option value='active'>Active</option>
+                                    <option value='motion'>Motion</option>
+                                    <option value='topper'>Topper</option>
+                                    <option value='mattress(all-in-one)'>Mattress(all-in-one)</option>
+                                    <option value='mattress(foldable)'>Mattress(foldable)</option>
+                                </select>
+                            </TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>설명 <strong>*</strong></TableCell>

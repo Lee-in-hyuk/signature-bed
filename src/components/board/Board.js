@@ -53,8 +53,8 @@ function Board() {
                     <option value="g2"/>
                     <option value="active"/>
                     <option value="topper"/>
-                    <option value="matress(all-in-one)"/>
-                    <option value="matress(foldable)"/>
+                    <option value="mattress(all-in-one)"/>
+                    <option value="mattress(foldable)"/>
                     <option value="motion bed"/>
                 </datalist>
                 <button><BiSearch/></button>
