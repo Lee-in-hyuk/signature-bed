@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './board.scss';
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@material-ui/core';
 import axios from 'axios';
@@ -24,11 +24,11 @@ function Board() {
             return currentPosts;
         }
         // // console.log(indexOfFirst);
-        async function getBoards(){
-            const response = await axios.get('http://localhost:8080/board')
-            // return setPosts(response.data);
-            return response.data;
-        }
+    async function getBoards(){
+        const response = await axios.get('http://localhost:8080/board')
+        // return setPosts(response.data);
+        return response.data;
+    }
     // 모달 작업
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -53,6 +53,7 @@ function Board() {
                     <option value="g2"/>
                     <option value="active"/>
                     <option value="topper"/>
+                    <option value="mattress"/>
                     <option value="mattress(all-in-one)"/>
                     <option value="mattress(foldable)"/>
                     <option value="motion bed"/>
@@ -97,7 +98,6 @@ function Board() {
                             width:'500px',
                             height: '520px',
                             backgroundColor: '#fff',
-                            border: '1px solid #eee',
                             borderRadius: '10px'
                         }
                       }}
