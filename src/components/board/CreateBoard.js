@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Table, TableBody, TableCell, TableRow } from '@material-ui/core';
 import './createboard.scss';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+// import { useNavigate } from 'react-router-dom';
 
 function CreateBoard() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [ formData, setFormData ] = useState({
         title:"",
         description:"",
-        enrolldate:"",
+        date:"",
     });
     const onChange = (e) => {
         // e.target은 각 인풋에 들어오는 값, 그걸 name과 value로 구조분해할당해서 적용
@@ -27,7 +27,7 @@ function CreateBoard() {
         setFormData({
             title:"",
             description:"",
-            enrolldate:"",
+            date:"",
         })
     }
     // post전송 axios
@@ -35,7 +35,7 @@ function CreateBoard() {
         axios.post("http://localhost:8080/create",formData)
         .then(function(res){
             console.log(res);
-            navigate(-1);
+            // navigate(-1);
         }).catch(function(err){
             console.log(err);
         })
@@ -72,7 +72,7 @@ function CreateBoard() {
                         </TableRow>
                         <TableRow>
                             <TableCell>등록일 <strong>*</strong></TableCell>
-                            <TableCell><input name='enrolldate' value={formData.enrolldate} onChange={onChange} required type="date"/></TableCell>
+                            <TableCell><input name='date' value={formData.date} onChange={onChange} required type="date"/></TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

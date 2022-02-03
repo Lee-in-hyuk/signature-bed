@@ -34,7 +34,7 @@ function Board() {
 
     const state = useAsync(getBoards);
     const { loading, error, data:board } = state;
-    // console.log(board)
+    console.log(board)
     // 로딩중이라면 ?
     if(loading) return <div>로딩중....</div>
     // 에러가 발생했다면 ?
