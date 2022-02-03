@@ -56,7 +56,7 @@ function Detailview() {
             </Table>
             <div id='detail_btn'>
                 <div>
-                    {/* <button><Link to={`/edit/${board[0].c_no}`}>수정하기</Link></button> */}
+                    <button><Link to={`/edit/${board[0].no}`}>수정하기</Link></button>
                     <button onClick={onDelete}>삭제</button>
                 </div>
                 <button onClick={(e)=>(e.preventDefault())}><Link to='/board'>리스트보기</Link></button>

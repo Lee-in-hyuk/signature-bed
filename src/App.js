@@ -21,6 +21,7 @@ import G2_02 from './components/G2_02';
 import G2_03 from './components/G2_03';
 import Active from './components/Active';
 import Detailview from './components/board/Detailview';
+import Editboard from './components/board/Editboard';
 
 function App() {
   const sampleData = [
@@ -101,7 +102,8 @@ function App() {
         <Route path='/g2_02' element={<G2_02/>}/>
         <Route path='/g2_03' element={<G2_03/>}/>
         <Route path='/active' element={<Active/>}/>
-        <Route path='/board/:id' element={<Detailview />}/>
+        <Route path='/board/:id' element={<Detailview/>}/>
+        <Route path='/edit/:id' element={<Editboard/>}/>
       </Routes>
       <Footer/>
     </div>
