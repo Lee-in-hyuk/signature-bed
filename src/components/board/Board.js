@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './board.scss';
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@material-ui/core';
 import axios from 'axios';
@@ -14,7 +14,9 @@ function Board() {
     // 페이지네이션 작업
     // const [board, setPosts] = useState([]);
     // // const [loading, setLoading] = useState(false);
+    const searchSel = useRef();
     const [currentPage, setCurrentPage] = useState(1);
+    // console.log(currentPage);
     const [postsPerPage, setPostsPerPage] = useState(5);
     const indexOfLast = currentPage * postsPerPage;
     const indexOfFirst = indexOfLast - postsPerPage;
@@ -29,25 +31,39 @@ function Board() {
         // return setPosts(response.data);
         return response.data;
     }
-    // 모달 작업
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
     const state = useAsync(getBoards);
     const { loading, error, data:board } = state;
-    console.log(board)
+
+    // 모달 작업
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    
+    // 검색 기능 구현
+    const [ sclist, setSclist ] = useState([]);
+    function onButton(e){
+        const dataset = e.target.dataset;
+        console.log(dataset);
+        const selectValue = searchSel.current.value;
+        console.log(selectValue);
+        const { key, value } = dataset;
+        // const lists = board.filter(item=>item[key] === value);
+        // setSclist(lists);
+    }
+    
     // 로딩중이라면 ?
     if(loading) return <div>로딩중....</div>
     // 에러가 발생했다면 ?
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>
     // 데이터가 없으면 ?
     if(!board) return null;
+   
+    
     // 위에 작성한 if문들이 모두 아니면 !
     return (
         <div id='board_wrap'>
             <h1>Product List</h1>
             {/* 새로운 타이틀의 상품이 추가되면 datalist 안에 option 추가하기 */}
             <div id='board_hd'>
-                <input type="text" list='prd_options' placeholder='Search...'/>
+                <input type="text" list='prd_options' ref={searchSel} placeholder='Search...'/>
                 <datalist id="prd_options">
                     <option value="basic"/>
                     <option value="g2"/>
@@ -58,7 +74,7 @@ function Board() {
                     <option value="mattress(foldable)"/>
                     <option value="motion bed"/>
                 </datalist>
-                <button><BiSearch/></button>
+                <button onClick={onButton}><BiSearch/></button>
             </div>
             <Table id='board_tb'>
                 <TableHead>
@@ -69,10 +85,7 @@ function Board() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {/* {board.map(data=>(
-                        <BoardList data={data} key={data.no}/>
-                    ))} */}
-                    <BoardList board={currentPosts(board)} key={board.no}/>
+                    <BoardList board={currentPosts(board)}/>
                 </TableBody>
             </Table>
             <div id='modal'>

@@ -11,7 +11,7 @@ function BoardList({data, board}) {
         // </TableRow>
         <>
         {board.map(data=>(
-            <TableRow>
+            <TableRow key={data.no}>
                 <TableCell>{data.no}</TableCell>
                 <TableCell><Link to={`/board/${data.no}`}>{data.title}</Link></TableCell>
                 <TableCell>{data.date}</TableCell>
