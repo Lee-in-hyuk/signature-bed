@@ -8,47 +8,52 @@ import BoardList from './BoardList';
 import CreateBoard from './CreateBoard';
 import Modal from 'react-modal';
 import Pagination from './Pagination';
-
+import { Link } from 'react-router-dom';
 
 function Board() {
     // 페이지네이션 작업
     // const [board, setPosts] = useState([]);
     // // const [loading, setLoading] = useState(false);
-    const searchSel = useRef();
     const [currentPage, setCurrentPage] = useState(1);
     // console.log(currentPage);
     const [postsPerPage, setPostsPerPage] = useState(5);
     const indexOfLast = currentPage * postsPerPage;
     const indexOfFirst = indexOfLast - postsPerPage;
     function currentPosts(tmp) {
-            let currentPosts = 0;
+        let currentPosts = 0;
             currentPosts = tmp.slice(indexOfFirst, indexOfLast);
             return currentPosts;
         }
         // // console.log(indexOfFirst);
-    async function getBoards(){
-        const response = await axios.get('http://localhost:8080/board')
+        // axios.get을 통해 서버에 들어간 데이터를 불러오게 하기
+        async function getBoards(){
+            const response = await axios.get('http://localhost:8080/board')
         // return setPosts(response.data);
         return response.data;
     }
+    // 훅을 통해 데이터 구조분해할당
     const state = useAsync(getBoards);
     const { loading, error, data:board } = state;
-
+    
     // 모달 작업
     const [modalIsOpen, setModalIsOpen] = useState(false);
     
     // 검색 기능 구현
-    const [ sclist, setSclist ] = useState([]);
-    function onButton(e){
-        const dataset = e.target.dataset;
-        console.log(dataset);
+    const searchSel = useRef();
+    // console.log(board);
+    const [ sclist, setSclist ] = useState(board);
+    console.log(sclist)
+    function onButton(){
         const selectValue = searchSel.current.value;
-        console.log(selectValue);
-        const { key, value } = dataset;
-        // const lists = board.filter(item=>item[key] === value);
-        // setSclist(lists);
+        // console.log(selectValue);
+        // console.log(board)
+        const lists = board.filter(item=>item.title === selectValue);
+        // console.log(lists);
+        setSclist(lists);
+        // console.log(setSclist(lists));
     }
     
+
     // 로딩중이라면 ?
     if(loading) return <div>로딩중....</div>
     // 에러가 발생했다면 ?
@@ -68,11 +73,11 @@ function Board() {
                     <option value="basic"/>
                     <option value="g2"/>
                     <option value="active"/>
+                    <option value="motion"/>
                     <option value="topper"/>
                     <option value="mattress"/>
                     <option value="mattress(all-in-one)"/>
                     <option value="mattress(foldable)"/>
-                    <option value="motion bed"/>
                 </datalist>
                 <button onClick={onButton}><BiSearch/></button>
             </div>
@@ -85,7 +90,15 @@ function Board() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    <BoardList board={currentPosts(board)}/>
+                    {/* <BoardList sclist={sclist}/> */}
+                    {/* <BoardList board={currentPosts(board)} sclist={sclist}/> */}
+                    {currentPosts(board).map(data=>(
+                        <TableRow key={data.no}>
+                            <TableCell>{data.no}</TableCell>
+                            <TableCell><Link to={`/board/${data.no}`}>{data.title}</Link></TableCell>
+                            <TableCell>{data.date}</TableCell>
+                        </TableRow>
+                    ))}
                 </TableBody>
             </Table>
             <div id='modal'>
@@ -124,13 +137,6 @@ function Board() {
             <div id='board_ft'>
                 {/* Pagination넣을 부분 */}
                 <Pagination  postsPerPage={postsPerPage} totalPosts={board.length} paginate={setCurrentPage}/>
-                {/* <div id='page_num'>
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                </div> */}
             </div>
         </div>
     );

@@ -48,6 +48,11 @@
                 svg {
                     width: 84px;
                     height: 84px;
+                    transition: 0.5s;
+                    &:hover {
+                        color: #fff;
+                        transform: scale(1.1);
+                    }
                 }
             }
         }

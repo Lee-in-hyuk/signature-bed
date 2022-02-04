@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TableRow, TableCell } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-function BoardList({data, board}) {
+function BoardList({data, board, sclist}) {
+    const [searchTerm, setSearchTerm] = useState('');
     return (
         // <TableRow>
         //     <TableCell>{data.no}</TableCell>

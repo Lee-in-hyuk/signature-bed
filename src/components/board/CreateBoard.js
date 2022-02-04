@@ -55,13 +55,14 @@ function CreateBoard() {
                             {/* <TableCell><input name='title' required type="text"/></TableCell> */}
                             <TableCell>
                                 <select name='title' required value={formData.title} onChange={onChange}>
-                                    <option value='basic'>Basic</option>
-                                    <option value='g2'>G2</option>
-                                    <option value='active'>Active</option>
-                                    <option value='motion'>Motion</option>
-                                    <option value='topper'>Topper</option>
-                                    <option value='mattress(all-in-one)'>Mattress(all-in-one)</option>
-                                    <option value='mattress(foldable)'>Mattress(foldable)</option>
+                                    <option value='basic'>basic</option>
+                                    <option value='g2'>g2</option>
+                                    <option value='active'>active</option>
+                                    <option value='motion'>motion</option>
+                                    <option value='topper'>topper</option>
+                                    <option value='mattress'>mattress</option>
+                                    <option value='mattress(all-in-one)'>mattress(all-in-one)</option>
+                                    <option value='mattress(foldable)'>mattress(foldable)</option>
                                 </select>
                             </TableCell>
                         </TableRow>
